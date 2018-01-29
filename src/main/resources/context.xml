@@ -6,6 +6,13 @@
 	">
     <import resource="classpath:uflo-console-context.xml" />
 
+
+    <bean id="propertyConfigurer" parent="uflo.props">
+        <property name="location">
+            <value>classpath:config.properties</value>
+        </property>
+    </bean>
+
     <bean class="com.eshare.uflo.example.TestEnvironmentProvider">
         <property name="sessionFactory" ref="sessionFactory" />
         <property name="platformTransactionManager" ref="transactionManager" />
